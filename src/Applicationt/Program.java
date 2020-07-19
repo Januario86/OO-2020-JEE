@@ -25,7 +25,27 @@ public class Program {
 		product.quantity = sc.nextInt();
 		
 		
-		System.out.println(product.name + ","+ product.price +"," + product.quantity);
+		System.out.println("Product Data : " + product);
+		
+		System.out.println();
+		
+		
+		System.out.print("Add unit at stock : ");
+		int quantity = sc.nextInt();
+		
+		product.addProducts(quantity);
+		
+		System.out.println("Update Product Data : " + product);
+		
+		System.out.println();
+		
+		System.out.print("Add unit at remove stock : ");
+		quantity = sc.nextInt();
+		product.removeProducts(quantity);
+		
+		System.out.println("Update Product Data : " + product);
+		
+		System.out.println();
 		
 		sc.close();
 

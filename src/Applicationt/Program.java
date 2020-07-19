@@ -2,42 +2,31 @@ package Applicationt;
 
 import java.util.Scanner;
 
-import entitiest.Triangle;
+import entitiest.Product;
+
+
 
 public class Program {
 
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-
-		Triangle x, y;
-
-		x = new Triangle();
-		y = new Triangle();
-
-		System.out.println("Enter the measures of triangle X: ");
-
-		x.a = sc.nextDouble();
-		x.b = sc.nextDouble();
-		x.c = sc.nextDouble();
-
-		System.out.println("Enter the measures of triangle Y: ");
-
-		y.a = sc.nextDouble();
-		y.b = sc.nextDouble();
-		y.c = sc.nextDouble();
-
-		double areaX = x.area();
-		double areaY = y.area();
-
-		System.out.printf("Triangle X area : %.4f%n", areaX);
-		System.out.printf("Triangle Y area : %.4f%n", areaY);
-
-		if (areaX > areaY) {
-			System.out.println("Triangle X total area marger");
-		} else {
-			System.out.println("Triangle Y total area marger");
-		}
+		
+		Product product= new Product();
+		System.out.println("Enter product data");
+		System.out.print("Name : ");
+		
+		product.name = sc.nextLine();
+		
+		System.out.print("Price : ");
+		product.price = sc.nextDouble();
+		
+		System.out.print("Quantity in Stock : ");
+		product.quantity = sc.nextInt();
+		
+		
+		System.out.println(product.name + ","+ product.price +"," + product.quantity);
+		
 		sc.close();
 
 	}
